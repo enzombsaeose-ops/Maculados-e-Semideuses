@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- Maculados e Semideuses VR.1.3 - combate, rolagens e histórico (base: 1.3 com código das imagens) (base: 1.3 com código das imagens) -->
+<!-- Maculados e Semideuses VR.1.4 (cap. 4 integrado) / base VR.1.3 - combate, rolagens e histórico (base: 1.3 com código das imagens) (base: 1.3 com código das imagens) -->
 <html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ficha do Maculado</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#ece2cb;--pn:#f6eed9;--ink:#2b2217;--gold:#7d5d17;--ln:#c4b185;--in:#fffaf0;--bad:#9b2b22;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0c09;--pn:#17140e;--ink:#e6dcc3;--gold:#cfa84a;--ln:#4b3f21;--in:#0d0c09;--bad:#e0705f}}
-:root[data-theme="dark"]{--bg:#0d0c09;--pn:#17140e;--ink:#e6dcc3;--gold:#cfa84a;--ln:#4b3f21;--in:#0d0c09;--bad:#e0705f}
+:root{--bg:#ece2cb;--pn:#f6eed9;--ink:#2b2217;--gold:#7d5d17;--ln:#c4b185;--in:#fffaf0;--bad:#9b2b22;--ok:#2f6b3f;--blu:#2f5d9b;--es:#3f8a55;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0c09;--pn:#17140e;--ink:#e6dcc3;--gold:#cfa84a;--ln:#4b3f21;--in:#0d0c09;--bad:#e0705f;--ok:#6fcf8a;--blu:#7fa8e8;--es:#4fae6c}}
+:root[data-theme="dark"]{--bg:#0d0c09;--pn:#17140e;--ink:#e6dcc3;--gold:#cfa84a;--ln:#4b3f21;--in:#0d0c09;--bad:#e0705f;--ok:#6fcf8a;--blu:#7fa8e8;--es:#4fae6c}
 html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
 *{box-sizing:border-box}
 body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:15px/1.4 system-ui,sans-serif}
@@ -83,7 +83,8 @@ nav{overflow-x:auto}nav button{flex:1 0 auto;padding:9px 12px;white-space:nowrap
 #md{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:10;overflow:auto;padding:16px}#md.on{display:block}
 .mc{background:var(--bg);border:1px solid var(--gold);padding:14px;max-width:480px;margin:auto}.mc label{margin-bottom:8px}.mc textarea{font:inherit;color:var(--ink);background:var(--in);border:1px solid var(--ln);padding:7px;width:100%}
 @media print{#nb{display:none}nav{display:none}section{display:block!important;page-break-after:always}}
-.fl{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fk{border:1px solid var(--ln);padding:10px;text-align:center;background:var(--in)}.fk b,.fk span{display:block}.fk b{font:700 15px Cinzel,Georgia,serif}.fk span{font-size:22px;margin:4px 0}.fk.c{color:#d94b4b}.fk.b{color:#4a8cff}.fk small{display:block;color:var(--ink);opacity:.8;margin-bottom:6px}.fi{width:44px;height:60px;margin:0 auto 6px;border-radius:10px 10px 18px 18px;background:currentColor;opacity:.85}.cn2{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;font-size:13px}.cn2 b{min-width:42px;text-align:center}.ar{display:flex;gap:8px}.ar input{width:64px;flex:none;text-align:center}.ar .add{flex:1;padding:10px 0}.ms{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.ms .slot{aspect-ratio:auto;min-height:64px}.ms+small{display:block;margin-top:8px;opacity:.8}.slot[disabled]{pointer-events:none}.kc{display:flex;gap:12px;align-items:center;text-align:left}.ki{flex:none;width:80px;height:80px;border:1px dashed var(--ln);background:linear-gradient(var(--in),var(--pn));overflow:hidden;display:block}.ki img{width:100%;height:100%;object-fit:cover;display:block}.kt{flex:1;min-width:0}.kt b,.kt small{display:block}</style></head><body>
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fk{border:1px solid var(--ln);padding:10px;text-align:center;background:var(--in)}.fk b,.fk span{display:block}.fk b{font:700 15px Cinzel,Georgia,serif}.fk span{font-size:22px;margin:4px 0}.fk.c{color:#d94b4b}.fk.b{color:#4a8cff}.fk small{display:block;color:var(--ink);opacity:.8;margin-bottom:6px}.fi{width:44px;height:60px;margin:0 auto 6px;border-radius:10px 10px 18px 18px;background:currentColor;opacity:.85}.cn2{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;font-size:13px}.cn2 b{min-width:42px;text-align:center}.ar{display:flex;gap:8px}.ar input{width:64px;flex:none;text-align:center}.ar .add{flex:1;padding:10px 0}.ms{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.ms .slot{aspect-ratio:auto;min-height:64px}.ms+small{display:block;margin-top:8px;opacity:.8}.slot[disabled]{pointer-events:none}.kc{display:flex;gap:12px;align-items:center;text-align:left}.ki{flex:none;width:80px;height:80px;border:1px dashed var(--ln);background:linear-gradient(var(--in),var(--pn));overflow:hidden;display:block}.ki img{width:100%;height:100%;object-fit:cover;display:block}.kt{flex:1;min-width:0}.kt b,.kt small{display:block}#start .rd h1,#start .rd h2,#start .rd h3{font-family:Cinzel,Georgia,serif;color:var(--gold);line-height:1.2;font-weight:700}#start .rd h1{font-size:34px;margin:18px 0 6px}#start .rd h2{font-size:22px;margin:46px 0 10px}#start .rd h3{font-size:16px;margin:0 0 4px}#start .rd p{margin:8px 0}#start .rd .lead{font-size:19px;opacity:.9}#start .rd .rnav{display:flex;gap:8px;overflow-x:auto;padding:8px 0 12px;margin:0 -18px;padding-left:18px;scrollbar-width:none;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:3;border-bottom:1px solid var(--ln)}#start .rd .rnav a{flex:none;font:600 13px system-ui,sans-serif;color:var(--ink);text-decoration:none;border:1px solid var(--ln);background:var(--pn);padding:7px 12px;border-radius:14px}#start .rd .rnav a:focus-visible,#start .rd summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}#start .rd .big{border-left:4px solid var(--gold);background:var(--pn);padding:14px 16px;margin:18px 0;font-size:18px}#start .rd .big b{font-family:Cinzel,Georgia,serif;color:var(--gold)}#start .rd .cards{display:grid;gap:10px;margin:14px 0}#start .rd .c{background:var(--pn);border:1px solid var(--ln);border-top:3px solid var(--k,var(--gold));padding:12px 14px}#start .rd .c p{margin:2px 0;font-size:15.5px}#start .rd .c .p{font:600 13px system-ui,sans-serif;color:var(--k,var(--gold));margin-top:6px}#start .rd .k-es{--k:var(--es)}#start .rd .k-bad{--k:var(--bad)}#start .rd .k-blu{--k:var(--blu)}#start .rd .k-ok{--k:var(--ok)}#start .rd .rbar{margin:18px 0 6px}#start .rd .rbar .t{height:22px;background:var(--pn);border:1px solid var(--ln);overflow:hidden;display:flex}#start .rd .rbar .t i{display:block;height:100%;background:var(--es)}#start .rd .rbar .t i.u{background:repeating-linear-gradient(45deg,var(--bad),var(--bad) 6px,transparent 6px,transparent 9px);opacity:.75}#start .rd .rbar small,#start .rd .cap{font:13px system-ui,sans-serif;opacity:.8;display:block;margin-top:5px}#start .rd .chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}#start .rd .chips span{font:600 14px system-ui,sans-serif;border:1px solid var(--gold);color:var(--gold);padding:4px 11px;border-radius:12px}#start .rd ol.st{list-style:none;padding:0;margin:12px 0;counter-reset:s}#start .rd ol.st li{counter-increment:s;position:relative;padding:0 0 12px 44px;border-left:0}#start .rd ol.st li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--gold);color:var(--bg);font:700 15px Cinzel,Georgia,serif;display:flex;align-items:center;justify-content:center}#start .rd ol.st li::after{content:"";position:absolute;left:14px;top:32px;bottom:2px;width:2px;background:var(--ln)}#start .rd ol.st li:last-child::after{display:none}#start .rd details{background:var(--pn);border:1px solid var(--ln);margin:12px 0}#start .rd summary{cursor:pointer;padding:11px 14px;font:600 14px system-ui,sans-serif;color:var(--gold);list-style:none}#start .rd summary::-webkit-details-marker{display:none}#start .rd summary::before{content:"+ ";font-weight:700}#start .rd details[open] summary::before{content:"− "}#start .rd details>div{padding:0 14px 12px;font-size:15.5px}#start .rd .wrap{overflow-x:auto}#start .rd table{border-collapse:collapse;width:100%;font:14px system-ui,sans-serif;margin:8px 0}#start .rd th,#start .rd td{border:1px solid var(--ln);padding:6px 9px;text-align:left}#start .rd th{color:var(--gold)}#start .rd code{font:14px ui-monospace,monospace;background:var(--bg);padding:1px 5px;border:1px solid var(--ln)}#start .rd .ex{border:1px dashed var(--gold);padding:4px 16px 10px;margin:16px 0}#start .rd .ex h3{margin-top:10px}#start .rd .ex p{font-size:16px}#start .rd dl{margin:10px 0}#start .rd dt{font:700 15px Cinzel,Georgia,serif;color:var(--gold);margin-top:10px}#start .rd dd{margin:0 0 0 0;font-size:15.5px}#start .rd .end{text-align:center;opacity:.65;font:13px system-ui,sans-serif;margin-top:50px}#start>.rd{max-width:680px;font:17px/1.65 Georgia,serif;color:var(--ink)}#start.rdm{overflow:visible}#start.rdm::before{display:none}#start .rd .rnav{margin:0 -16px;padding-left:16px}#start .rd h2{scroll-margin-top:64px}@media(min-width:560px){#start .rd .cards.c3{grid-template-columns:repeat(3,1fr)}}
+</style></head><body>
 <h1>Ficha do Maculado</h1><button class="add" id="nb">Voltar ao menu</button>
 <nav><button data-tab="0" class="on">Status</button><button data-tab="4">Combate</button><button data-tab="1">Magias e Cinzas</button><button data-tab="2">Equipamento</button><button data-tab="3">Inventário</button></nav>
 <main>
@@ -109,6 +110,139 @@ nav{overflow-x:auto}nav button{flex:1 0 auto;padding:9px 12px;white-space:nowrap
 <div class="box"><h2>Reações</h2><div class="g"><label>Custo de ES do ataque inimigo<input id="ecost" type="number"></label></div><div class="arw" style="flex-wrap:wrap;margin-top:8px"><button class="add" data-re="esq">Esquivar</button><button class="add" data-re="def">Defender</button><button class="add" data-re="pay">Pagar custo da defesa</button><button class="add" data-re="par">Aparar</button></div></div></section>
 <button id="hb" aria-label="Histórico de rolagens">🎲</button><div id="rp"></div><div id="tt"></div>
 </main>
+<template id="cap4"><button class="card" data-go="sys" style="text-align:center"><b>Voltar aos capítulos</b></button>
+
+<h1>Capítulo 4: Combate</h1>
+<p class="lead">Aqui você aprende a lutar, a se proteger e a não ficar sem fôlego no meio da briga.</p>
+
+<div class="rnav"><a href="#c4-base" data-sc="c4-base">O básico</a><a href="#c4-es" data-sc="c4-es">Estamina</a><a href="#c4-turno" data-sc="c4-turno">Seu turno</a><a href="#c4-atacar" data-sc="c4-atacar">Atacar</a><a href="#c4-defender" data-sc="c4-defender">Se defender</a><a href="#c4-postura" data-sc="c4-postura">Postura</a><a href="#c4-equip" data-sc="c4-equip">Armadura e carga</a><a href="#c4-estus" data-sc="c4-estus">Estus</a><a href="#c4-ex" data-sc="c4-ex">Exemplo</a><a href="#c4-gl" data-sc="c4-gl">Glossário</a></div>
+
+<div class="big"><b>A ideia central:</b> em Elden Ring, lutar cansa. Aqui, tudo o que você faz num turno gasta <b>estamina</b>. Se ela acabar, você fica exposto. Lutar bem é saber quando atacar e quando segurar.</div>
+
+<h2 id="c4-base">O básico: como um teste funciona</h2>
+<p>Sempre que o resultado de algo é incerto (acertar um golpe, pular um abismo), você faz um <b>teste</b>. É simples:</p>
+<div class="big" style="text-align:center">Role <b>um dado de 100 lados (d100)</b> e some o número da sua perícia.<br>Quanto maior o total, melhor.</div>
+<p>Dois resultados do dado são especiais, não importa a sua perícia:</p>
+<div class="cards c3">
+<div class="c k-bad"><h3>Falha crítica</h3><p>O dado mostrou de 1 a 5. O golpe não causa dano.</p></div>
+<div class="c k-ok"><h3>Crítico</h3><p>O dado mostrou de 96 a 99. O dano é dobrado.</p></div>
+<div class="c"><h3>Crítico preciso</h3><p>O dado mostrou 100. O dano é triplicado.</p></div>
+</div>
+<p><b>Quem age primeiro?</b> Todo mundo faz um teste de <b>iniciativa</b>: d100 mais a sua Destreza. Maior total age primeiro.</p>
+
+<h2 id="c4-es">Estamina (ES): o seu fôlego</h2>
+<p>Pense na estamina como uma barra de energia. Cada ação tira um pedaço. Quando você descansa um turno, parte volta. A sua ES máxima vem do atributo <b>Resistência</b>: quanto mais resistente, mais fôlego.</p>
+<div class="rbar" aria-hidden="true"><div class="t"><i style="width:55%"></i><i class="u" style="width:25%"></i></div><small>Exemplo: a parte listrada é o que um golpe e uma esquiva acabaram de gastar.</small></div>
+
+<h3 style="margin-top:20px">Quanto custa cada coisa</h3>
+<div class="cards c3">
+<div class="c k-es"><h3>Atacar</h3><p>Cada golpe custa. O primeiro é barato, os seguintes ficam cada vez mais caros.</p></div>
+<div class="c k-es"><h3>Esquivar</h3><p>Custa um pouco. Fica mais caro se você estiver carregando muito peso.</p></div>
+<div class="c k-es"><h3>Andar</h3><p>Em combate, cada quadrado gasta ES. Fora de combate, andar é de graça.</p></div>
+</div>
+<details><summary>Para quem quer os números exatos</summary><div>
+<div class="wrap"><table>
+<tr><th>Ação</th><th>Custo de ES</th></tr>
+<tr><td>Ação básica (pegar item da mochila, etc.)</td><td>2</td></tr>
+<tr><td>Pegar item do Inventário Rápido</td><td>1</td></tr>
+<tr><td>Andar, por quadrado em combate</td><td>1 (Grande: 2)</td></tr>
+<tr><td>Esquivar</td><td>5 (carga Pesada: 10)</td></tr>
+<tr><td>Aparar</td><td>5</td></tr>
+<tr><td>Defender</td><td>igual ao custo do ataque que você sofreu</td></tr>
+</table></div>
+<p><b>Ataques em sequência no mesmo turno:</b></p>
+<div class="chips"><span>1º: 5</span><span>2º: 7</span><span>3º: 11</span><span>4º: 17</span><span>5º: 25</span></div>
+<p>O n-ésimo ataque custa <code>5 + n × (n − 1)</code>. Ataque <b>carregado</b>: +2 de ES e −10 no teste, em troca de mais dano.</p>
+<p><b>ES máxima:</b> cada ponto de Resistência rende 2 de ES, e a cada 10 pontos esse valor sobe 1 (pontos 11 a 20 rendem 3 cada, e assim por diante).</p>
+</div></details>
+
+<h3>Recuperar o fôlego</h3>
+<p>Você pode passar o turno inteiro parado, sem fazer mais nada, para <b>recuperar</b> ES. Ganha 10, e um pouco mais a cada 10 pontos de Resistência (+2 por faixa).</p>
+
+<div class="cards"><div class="c k-bad"><h3>Se a ES chegar a zero</h3><p>Sua postura quebra. Você fica <b>vulnerável por 1 round</b>: sem agir, sem se defender direito. É a pior coisa que pode acontecer numa luta, então nunca gaste tudo sem ter certeza.</p></div></div>
+
+<h2 id="c4-turno">Seu turno, passo a passo</h2>
+<p>Não existe "ação de movimento" ou "ação bônus". Você tem uma barra de ES e decide como gastá-la.</p>
+<ol class="st">
+<li><b>Olhe sua ES.</b> Quanto de fôlego sobrou?</li>
+<li><b>Mova-se, se precisar.</b> Cada quadrado em combate gasta um pouco.</li>
+<li><b>Ataque quantas vezes aguentar.</b> Lembre que o próximo golpe sempre custa mais que o anterior.</li>
+<li><b>Termine o turno.</b> Se estiver quase sem ES, considere recuperar no turno seguinte.</li>
+</ol>
+
+<h2 id="c4-atacar">Atacar</h2>
+<p>Você escolhe a perícia pela arma: <b>Luta</b> para corpo a corpo, <b>Pontaria</b> para arcos e bestas, ou a perícia da própria magia (Astrologia, Religião ou Arcanismo). Faça o teste. Se acertar, role o dano.</p>
+<div class="big"><b>Dano</b> = dado da arma + um atributo (normalmente Força) + bônus, depois multiplicado pelo resultado do dado: normal ×1, crítico ×2, crítico preciso ×3.</div>
+<p>Atacar de forma <b>carregada</b> é mais lento e arriscado, mas dá multiplicadores maiores: um acerto comum carregado vale ×1,5, um crítico carregado vale ×3, e um crítico preciso, ×4.</p>
+
+<h2 id="c4-defender">Quando atacam você</h2>
+<p>Jogadores não têm "classe de armadura". Em vez disso, <b>cada ataque contra você pede uma reação</b>, e você escolhe qual usar. É um duelo de testes: o seu contra o do atacante.</p>
+<div class="cards c3">
+<div class="c k-blu"><h3>Esquivar</h3><p>Teste de <b>Reflexos</b>. Precisa superar o ataque (empate perde). Se der certo, você não leva nada.</p><div class="p">Gasta ES</div></div>
+<div class="c k-ok"><h3>Defender</h3><p>Teste de <b>Fortitude</b>. Se passar, o golpe é anulado, mas você paga a ES que o ataque custou ao inimigo.</p><div class="p">Gasta ES do ataque</div></div>
+<div class="c k-bad"><h3>Aparar</h3><p>Teste de <b>Luta com Destreza</b>, mais difícil. Se der certo, o inimigo perde metade da postura. Se falhar, você leva dano maior.</p><div class="p">Arriscado e poderoso</div></div>
+</div>
+<details><summary>Regras exatas das reações</summary><div>
+<p><b>Aparar:</b> custa 5 de ES, e você precisa superar o ataque por 15 ou mais. Falhou? O dano que você recebe é ×1,5.</p>
+<p><b>Esquivar:</b> não é possível se você estiver sobrecarregado.</p>
+<p><b>Redução de dano:</b> sua armadura reduz o que passa. Existe a <b>RDF</b> (contra dano físico) e a <b>RDM</b> (contra dano mágico), somadas das peças que você veste. Peça danificada vale metade, peça quebrada não vale nada. Escudos protegem muito contra físico e pouco contra mágico, e podem receber o ataque no lugar de um aliado.</p>
+</div></details>
+
+<h2 id="c4-postura">Postura: o ponto fraco de todo mundo</h2>
+<p>Postura é o equilíbrio de quem luta. Para os jogadores, <b>é a própria ES</b>: acabou o fôlego, perdeu o equilíbrio.</p>
+<p>Os <b>inimigos</b> têm uma barra de postura separada, igual à <b>metade da vida</b> deles. Todo dano que eles sofrem tira vida e postura juntos, e a postura volta um pouco a cada turno.</p>
+<div class="big">Quando a postura de um inimigo quebra, ele fica vulnerável. <b>Um</b> jogador, escolhido pelo grupo, ataca com o <b>dano triplicado</b>. Se o grupo demorar, o mestre levanta o inimigo.</div>
+<p>É por isso que lutar em equipe funciona: um aguenta a pressão, outro quebra a defesa, e o terceiro aproveita.</p>
+
+<h2 id="c4-equip">Armadura e carga</h2>
+<p>Quanto mais pesado o seu equipamento, mais difícil se mexer. A sua capacidade de carregar vem da Resistência.</p>
+<div class="cards c3">
+<div class="c"><h3>Leve</h3><p>Rápido e ágil. Bônus em Reflexos.</p></div>
+<div class="c"><h3>Médio</h3><p>Sem vantagens nem penalidades.</p></div>
+<div class="c k-bad"><h3>Pesado</h3><p>Reflexos pioram e esquivar custa o dobro.</p></div>
+</div>
+<p>Se passar do limite, você fica <b>sobrecarregado</b>: não consegue esquivar e andar custa o dobro. A ficha mostra em que faixa você está.</p>
+<details><summary>Faixas exatas</summary><div>
+<p>Carga máxima = 2 × Resistência. Leve: menos de 30% (Reflexos +10). Médio: 30% a 70% (sem efeito). Pesado: 70% a 100% (Reflexos −15, esquiva custa 10). Sobrecarregado: mais de 100%.</p>
+</div></details>
+
+<h2 id="c4-estus">Estus: a cura em batalha</h2>
+<p>Beber Estus gasta <b>tempo</b>, não ES: você pode andar no máximo 1 quadrado e não faz mais nada no turno. Existem dois tipos:</p>
+<div class="cards">
+<div class="c k-bad"><h3>Estus Carmesim</h3><p>Recupera vida (PV).</p></div>
+<div class="c k-blu"><h3>Estus Cinzento</h3><p>Recupera mana (PM).</p></div>
+</div>
+<p>Você começa com poucos frascos. Achar <b>Sementes Douradas</b> aumenta a quantidade, e <b>Lágrimas Sagradas</b> aumentam a cura de cada gole. Ao descansar num <b>Sítio de Graça</b>, tudo se recarrega e sua vida, mana e ES voltam ao máximo.</p>
+<details><summary>Números do Estus</summary><div>
+<p>Começa com 4 frascos, podendo chegar a 14 com Sementes. Você divide os frascos entre Carmesim e Cinzento como quiser. Carmesim cura 30 PV mais 7 por Lágrima (até 12). Cinzento recupera 10 PM mais 4 por Lágrima.</p>
+</div></details>
+
+<h2>Tamanho</h2>
+<p><b>Médio</b> é o padrão. Criaturas <b>Grandes</b> alcançam um quadrado a mais, mas gastam o dobro de ES para andar.</p>
+
+<h2 id="c4-ex">Um turno de exemplo</h2>
+<div class="ex">
+<h3>Mara, a Guerreira, contra um soldado</h3>
+<p><b>1.</b> Mara ataca com a cimitarra. Ela rola 62 no dado, soma a Luta e acerta. Gasta pouca ES.</p>
+<p><b>2.</b> Ela ataca de novo. Custa mais, mas o soldado ainda está de pé. Agora Mara já usou boa parte do fôlego.</p>
+<p><b>3.</b> É a vez do soldado. Ele ataca Mara. Ela escolhe <b>esquivar</b>: rola Reflexos, supera o ataque, e não sofre dano.</p>
+<p><b>4.</b> No turno seguinte, Mara vê que a ES está baixa e decide <b>recuperar</b>, passando o turno sem agir.</p>
+<p class="cap">A lição: nenhum golpe é "de graça". Escolher o momento certo vale mais que atacar sempre.</p>
+</div>
+
+<h2 id="c4-gl">Glossário rápido</h2>
+<dl>
+<dt>d100</dt><dd>Dado de cem lados. Dá um número de 1 a 100.</dd>
+<dt>Teste</dt><dd>Rolar d100, somar o valor da perícia e comparar com o necessário.</dd>
+<dt>PV, PM, ES</dt><dd>Vida, mana e estamina.</dd>
+<dt>Round</dt><dd>Uma volta completa em que todos agem uma vez.</dd>
+<dt>Vulnerável</dt><dd>Sem condições de se defender ou agir bem.</dd>
+<dt>RDF e RDM</dt><dd>Redução de dano física e mágica, dadas pela armadura.</dd>
+<dt>Mestre</dt><dd>A pessoa que conduz a história e controla os inimigos.</dd>
+</dl>
+
+<p class="end">Fim do capítulo 4 · Próximo: Equipamento</p>
+<button class="card" data-go="sys" style="text-align:center"><b>Voltar aos capítulos</b></button></template>
 <script>
 var A=['Vitalidade','Mente','Resistência','Força','Destreza','Inteligência','Fé','Arcano'];
 var AB=['VIT','MEN','RES','FOR','DES','INT','FÉ','ARC'];
@@ -335,9 +469,9 @@ calc();
 var cur=0,cho=[],opts=[],need=0,car=null,sv=document.createElement('div');sv.id='start';document.body.insertBefore(sv,document.body.firstChild);
 function show(on){document.body.classList.toggle('pick',on)}
 function has(){return Object.keys(st).length>1}
-function go(fn){sv.classList.add('fo');setTimeout(function(){fn();window.scrollTo(0,0);sv.classList.remove('fo')},350)}
+function go(fn){sv.classList.add('fo');setTimeout(function(){sv.classList.remove('rdm');fn();window.scrollTo(0,0);sv.classList.remove('fo')},350)}
 function srt(a){return a.sort(function(x,y){return x.localeCompare(y,'pt')})}
-function s1(){sv.innerHTML='<div class="wt">Bem-vindo, Maculado!</div><div class="mn">'+(has()?'<button class="card" data-go="back"><b>Voltar à ficha</b></button><button class="card" data-go="cf"><b>Criar Maculado</b></button>':'<button class="card" data-go="new"><b>Criar Maculado</b></button>')+'<button class="card" data-go="sys"><b>Ler Sistema</b></button></div><div class="vr">VR.1.3</div>'}
+function s1(){sv.innerHTML='<div class="wt">Bem-vindo, Maculado!</div><div class="mn">'+(has()?'<button class="card" data-go="back"><b>Voltar à ficha</b></button><button class="card" data-go="cf"><b>Criar Maculado</b></button>':'<button class="card" data-go="new"><b>Criar Maculado</b></button>')+'<button class="card" data-go="sys"><b>Ler Sistema</b></button></div><div class="vr">VR.1.4</div>'}
 function sc(){sv.innerHTML='<div class="wt" style="font-size:clamp(26px,7vw,44px);margin-top:10vh">Você tem certeza?</div><div class="mn"><p style="text-align:center">Criar um novo Maculado vai apagar a sua ficha atual.</p><button class="card" data-go="new"><b>Sim, apagar e criar</b></button><button class="card" data-go="home"><b>Cancelar</b></button></div>'}
 function sl(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-')}
 function imgErr(i){if(i.src.indexOf('.jpg')>0){i.src=i.src.replace('.jpg','.png')}else{i.remove()}}
@@ -347,6 +481,7 @@ function s2(){sv.innerHTML='<h2 style="text-align:center">Escolha sua origem</h2
 function s3(){var o=TR[cur],f=o[0].split('|');need=o[1];cho=[];opts=srt(o[2].split('|'));
  sv.innerHTML='<h2>'+O[cur].n+': perícias treinadas</h2><p>Treino fixo: <b>'+srt(f.slice()).join(', ')+'</b></p><p>Escolha <b>'+need+'</b>: <span id="cnt">0</span>/'+need+'</p><div>'+opts.map(function(x,j){return '<button class="card opt" data-go="t:'+j+'"><b>'+x+'</b></button>'}).join('')+'</div><button class="card" id="cont" data-go="cont" style="opacity:.4"><b>Continuar</b></button><button class="card" data-go="new"><b>Voltar às origens</b></button>'}
 function s4(){sv.innerHTML='<h2>'+O[cur].n+': escolha sua lembrança</h2>'+K.map(function(k,j){return '<button class="card kc" data-go="k:'+j+'"><span class="ki"><img src="imagens/lembrancas/'+sl(k.n)+'.jpg" alt="" onerror="imgErr(this)"></span><span class="kt"><b>'+k.n+'</b><small>'+k.d+'</small></span></button>'}).join('')+'<button class="card" data-go="new"><b>Voltar às origens</b></button>'}
+function s6(i){sv.innerHTML='<div class="rd">'+$('#cap4').innerHTML+'</div>';sv.classList.add('rdm')}
 function s5(){sv.innerHTML='<h2>Sistema</h2>'+CH.map(function(c,i){return '<button class="card" data-go="c:'+i+'"><b>Capítulo '+(i+1)+'</b><small>'+c+'</small></button>'}).join('')+'<p id="cm" class="bad"></p><button class="card" data-go="home"><b>Voltar</b></button>'}
 function tkey(nm){for(var i=0;i<SK.length;i++)if(SK[i][0]==nm)return 'st'+i;for(i=0;i<P.length;i++)if(P[i][0]==nm)return 'ps'+i}
 function make(k){var o=O[cur],c=K[k];st={};L={atk:[],mag:[],cin:[]};IT=[];EQ={};NX=1;
@@ -364,14 +499,14 @@ function make(k){var o=O[cur],c=K[k];st={};L={atk:[],mag:[],cin:[]};IT=[];EQ={};
  ivt='Tudo';ivs='';ivr();eqr();
  TR[cur][0].split('|').concat(cho).forEach(function(nm){if(nm){var t=tkey(nm);if(t)st[t]=1}});
  refill();for(var z in L)rl(z);calc();save();show(false);window.scrollTo(0,0)}
-sv.onclick=function(e){var b=e.target.closest('[data-go]');if(!b)return;var g=b.dataset.go;
+sv.onclick=function(e){var a=e.target.closest('[data-sc]');if(a){e.preventDefault();var t=document.getElementById(a.dataset.sc);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});return}var b=e.target.closest('[data-go]');if(!b)return;var g=b.dataset.go;
  if(g=='new')go(s2);else if(g=='cf')go(sc);else if(g=='back')show(false);else if(g=='home')go(s1);else if(g=='sys')go(s5);
  else if(g.indexOf('ar:')==0)car.scrollBy({left:+g.slice(3)*car.clientWidth*.8,behavior:'smooth'});
  else if(g.indexOf('o:')==0){cur=+g.slice(2);go(TR[cur][1]?s3:s4)}
  else if(g.indexOf('t:')==0){var x=opts[+g.slice(2)],p=cho.indexOf(x);if(p>=0)cho.splice(p,1);else if(cho.length<need)cho.push(x);
   q('.opt').forEach(function(el,j){el.classList.toggle('on',cho.indexOf(opts[j])>=0)});$('#cnt').textContent=cho.length;$('#cont').style.opacity=cho.length==need?1:.4}
  else if(g=='cont'){if(cho.length==need)go(s4)}
- else if(g.indexOf('c:')==0)$('#cm').textContent='O capítulo '+(+g.slice(2)+1)+' ainda está em construção.';
+ else if(g=='c:3')go(function(){s6(3)});else if(g.indexOf('c:')==0)$('#cm').textContent='O capítulo '+(+g.slice(2)+1)+' ainda está em construção.';
  else if(g.indexOf('k:')==0)make(+g.slice(2))};
 $('#nb').onclick=function(){s1();show(true);window.scrollTo(0,0)};
 if(!has()){s1();show(true)}
