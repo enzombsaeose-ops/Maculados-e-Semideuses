@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Maculados e Semideuses VR.1.3 - combate, rolagens e histórico (base: 1.3 com código das imagens) (base: 1.3 com código das imagens) -->
 <html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ficha do Maculado</title>
@@ -59,30 +60,54 @@ button.add,.row button{background:none;border:1px solid var(--gold);color:var(--
 .card b{display:block;font:700 17px Cinzel,Georgia,serif;color:var(--gold)}.card small{display:block;opacity:.85;margin-top:3px;font-size:13px}
 #start h2{margin:6px 0 10px}#start p{margin:6px 0}
 #nb{margin:8px 14px}
+nav{overflow-x:auto}nav button{flex:1 0 auto;padding:9px 12px;white-space:nowrap}
+.chip{padding:7px 12px;margin:0 6px 6px 0;background:var(--pn);color:var(--ink);border:1px solid var(--ln);border-radius:14px;font:13px system-ui,sans-serif}.chip.on{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.slot{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px;position:relative;background:var(--pn);color:var(--ink);border:1px solid var(--gold);border-radius:3px;font:12px/1.2 system-ui,sans-serif;text-align:center;overflow:hidden}
+.slot b{font-weight:600;word-break:break-word}.slot i{position:absolute;right:4px;bottom:2px;font-style:normal;color:var(--gold)}.slot u{text-decoration:none;font-size:10px;color:var(--bad)}
+.slot.add{font-size:28px;color:var(--gold);border-style:dashed}.slot.em{border:1px solid var(--ln);background:transparent;opacity:.45}
+.eqg{display:grid;grid-template-columns:1fr 1fr;gap:12px}.eqg .col{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start}
+.slot.eq small{position:absolute;top:2px;left:3px;font-size:9px;opacity:.75}.ic{width:55%;fill:none;stroke:currentColor;stroke-width:1.5;opacity:.3}
+#nb{margin:8px 14px}.vr{text-align:center;opacity:.55;font-size:12px;margin-top:28px}
+.bar{margin-bottom:12px}.bh{display:flex;justify-content:space-between}.bt{height:14px;background:var(--in);border:1px solid var(--ln);margin:4px 0 6px}.bt div{height:100%;transition:width .25s}
+.bar .arw .add{flex:1;padding:8px 0}
+.t[data-rs],.rl{cursor:pointer}.t[data-rs]{text-decoration:underline dotted}
+#hb{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:5;width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--bg);border:0;font-size:24px}.pick #hb{display:none}
+#rp{display:none;position:fixed;left:0;right:0;bottom:0;z-index:12;padding:12px}#rp.on{display:block}
+.rpc{background:var(--bg);border:2px solid var(--rc,var(--gold));max-width:480px;margin:auto;padding:14px;text-align:center}.rpc p{margin:4px 0}
+.cf{--rc:#e04b4b}.cc{--rc:#2fbf62}.cp{--rc:#4a8cff}.cn{--rc:var(--ink)}.hf b{color:#e04b4b}.hc b{color:#2fbf62}.hp b{color:#4a8cff}
+.die{position:relative;width:120px;height:120px;margin:10px auto;perspective:300px}.die svg{width:100%;height:100%}.die polygon{fill:var(--pn);stroke:var(--rc,var(--gold));stroke-width:4}
+.die span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:700 34px Cinzel,Georgia,serif;color:var(--rc,var(--gold))}
+.spin svg{animation:sp .7s linear infinite}@keyframes sp{from{transform:rotateY(0) rotate(0)}to{transform:rotateY(360deg) rotate(180deg)}}
+#tt{display:none;position:fixed;top:60px;left:50%;transform:translateX(-50%);background:var(--bad);color:#fff;padding:8px 14px;z-index:20;border-radius:3px}#tt.on{display:block}
+#md{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:10;overflow:auto;padding:16px}#md.on{display:block}
+.mc{background:var(--bg);border:1px solid var(--gold);padding:14px;max-width:480px;margin:auto}.mc label{margin-bottom:8px}.mc textarea{font:inherit;color:var(--ink);background:var(--in);border:1px solid var(--ln);padding:7px;width:100%}
 @media print{#nb{display:none}nav{display:none}section{display:block!important;page-break-after:always}}
-</style></head><body>
-<h1>Ficha do Maculado</h1><button class="add" id="nb">Novo personagem</button>
-<nav><button data-tab="0" class="on">Status</button><button data-tab="1">Magias e Cinzas</button><button data-tab="2">Equipamento</button></nav>
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fk{border:1px solid var(--ln);padding:10px;text-align:center;background:var(--in)}.fk b,.fk span{display:block}.fk b{font:700 15px Cinzel,Georgia,serif}.fk span{font-size:22px;margin:4px 0}.fk.c{color:#d94b4b}.fk.b{color:#4a8cff}.fk small{display:block;color:var(--ink);opacity:.8;margin-bottom:6px}.fi{width:44px;height:60px;margin:0 auto 6px;border-radius:10px 10px 18px 18px;background:currentColor;opacity:.85}.cn2{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;font-size:13px}.cn2 b{min-width:42px;text-align:center}.ar{display:flex;gap:8px}.ar input{width:64px;flex:none;text-align:center}.ar .add{flex:1;padding:10px 0}.ms{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.ms .slot{aspect-ratio:auto;min-height:64px}.ms+small{display:block;margin-top:8px;opacity:.8}.slot[disabled]{pointer-events:none}.kc{display:flex;gap:12px;align-items:center;text-align:left}.ki{flex:none;width:80px;height:80px;border:1px dashed var(--ln);background:linear-gradient(var(--in),var(--pn));overflow:hidden;display:block}.ki img{width:100%;height:100%;object-fit:cover;display:block}.kt{flex:1;min-width:0}.kt b,.kt small{display:block}</style></head><body>
+<h1>Ficha do Maculado</h1><button class="add" id="nb">Voltar ao menu</button>
+<nav><button data-tab="0" class="on">Status</button><button data-tab="4">Combate</button><button data-tab="1">Magias e Cinzas</button><button data-tab="2">Equipamento</button><button data-tab="3">Inventário</button></nav>
 <main>
 <section id="p0" class="on">
-<div class="box"><div class="g" id="idt"></div></div>
+<div class="box"><div class="g" id="idt"></div><div id="rn" style="margin-top:10px"></div></div>
 <div class="box"><h2>Atributos</h2><div class="g" id="attrs"></div></div>
 <div class="box"><h2>Recursos</h2><div class="res" id="res"></div></div>
 <div class="box"><h2>Custos de ES</h2><p style="margin:0;font-size:13px">Ação básica 2 · Andar 1 por quadrado (Grande 2; fora de combate grátis) · Esquivar 5 · Item do inv. rápido 1 · Ataques em sequência 5, 7, 11, 17, 25 · ES em 0 = postura quebrada.</p></div>
 <div class="box"><h2>Perícias</h2><div class="sk h"><span>Perícia</span><span>Atributo</span><span>Treinada</span><span>Outros</span><span>Total</span></div><div id="skills"></div>
 <h3>Presença</h3><label style="max-width:200px">Outros (todas de Presença)<input data-id="po" type="number"></label><div class="sk h" style="margin-top:6px"><span>Subperícia</span><span>Atributo</span><span>Treinada</span><span></span><span>Total</span></div><div id="pres"></div></div>
-<div class="box"><h2>Inventário rápido</h2><div class="g" id="qi"></div></div>
-<div class="box"><h2>Ataques (atalho)</h2><div id="L_atk"></div><button class="add" data-add="atk">Adicionar ataque</button></div>
 </section>
 <section id="p1">
+<div class="box"><h2>Slots de magia</h2><div id="msl"></div></div>
 <div class="box"><h2>Magias</h2><div id="L_mag"></div><button class="add" data-add="mag">Adicionar magia</button></div>
 <div class="box"><h2>Cinzas de Guerra</h2><div id="L_cin"></div><button class="add" data-add="cin">Adicionar cinza</button></div>
 </section>
-<section id="p2">
-<div class="box"><h2>Equipamento</h2><div class="eq h"><span>Espaço</span><span>Item</span><span>Peso</span><span>RDF</span><span>RDM</span><span>Estado</span></div><div id="eqs"></div>
-<div class="res" style="margin-top:8px"><div><b id="ew">0</b><small>Carga</small></div><div><b id="erf">0</b><small>RDF</small></div><div><b id="erm">0</b><small>RDM</small></div></div></div>
-<div class="box"><h2>Inventário</h2><div id="L_inv"></div><button class="add" data-add="inv">Adicionar item</button></div>
-</section>
+<section id="p2"><div class="box"><h2>Equipamento</h2><div id="eqv"></div><div class="res" style="margin-top:10px"><div><b id="ew">0</b><small>Carga</small></div><div><b id="erf">0</b><small>RDF</small></div><div><b id="erm">0</b><small>RDM</small></div></div><p id="cgx" style="font-size:13px;margin:8px 0 0"></p></div><div class="box"><h2>Slots rápidos</h2><div class="slots" id="qs"></div></div></section>
+<section id="p3"><div class="box"><h2>Inventário</h2><p class="sub" style="margin:0;font-size:12px">Tudo o que você carrega, equipado ou não.</p><div id="itabs" style="margin-top:8px"></div><div id="isub"></div><div class="slots" id="islots"></div></div></section>
+<section id="p4"><div class="box"><h2>Recursos</h2><div id="bars"></div></div>
+<div class="box"><h2>Estus</h2><div id="esd"></div><details style="margin-top:10px"><summary>Ajustar cura</summary><div class="g"><label>Sementes usadas<input data-id="sm" type="number"></label><label>Lágrimas usadas<input data-id="lg" type="number"></label><label>Carmesim: base<input data-id="eb1" type="number" value="30"></label><label>Carmesim: por lágrima<input data-id="ep1" type="number" value="7"></label><label>Cinzento: base<input data-id="eb2" type="number" value="10"></label><label>Cinzento: por lágrima<input data-id="ep2" type="number" value="4"></label></div></details></div>
+<div class="box"><h2>Turno</h2><p style="margin:0 0 8px">Ataques neste turno: <b id="atn">0</b></p><div class="arw" style="flex-wrap:wrap"><button class="add" data-tn="ini">Iniciativa</button><button class="add" data-tn="new">Novo turno</button><button class="add" data-tn="rec">Recuperar</button><button class="add" data-tn="undo">Desfazer</button></div></div>
+<div class="box"><h2>Ataques</h2><div id="L_atk"></div><button class="add" data-add="atk">Adicionar ataque</button></div>
+<div class="box"><h2>Reações</h2><div class="g"><label>Custo de ES do ataque inimigo<input id="ecost" type="number"></label></div><div class="arw" style="flex-wrap:wrap;margin-top:8px"><button class="add" data-re="esq">Esquivar</button><button class="add" data-re="def">Defender</button><button class="add" data-re="pay">Pagar custo da defesa</button><button class="add" data-re="par">Aparar</button></div></div></section>
+<button id="hb" aria-label="Histórico de rolagens">🎲</button><div id="rp"></div><div id="tt"></div>
 </main>
 <script>
 var A=['Vitalidade','Mente','Resistência','Força','Destreza','Inteligência','Fé','Arcano'];
@@ -90,10 +115,15 @@ var AB=['VIT','MEN','RES','FOR','DES','INT','FÉ','ARC'];
 var SK=[['Arcanismo','Arcano'],['Astrologia','Inteligência'],['Atletismo','Força'],['Fortitude','Resistência'],['História','Inteligência'],['Intuição','Mente'],['Investigação','Inteligência'],['Ladinagem','Destreza'],['Luta','Força'],['Percepção','Mente'],['Pontaria','Destreza'],['Reflexos','Destreza'],['Religião','Fé'],['Sobrevivência','Fé'],['Vontade','Mente']];
 var P=[['Bravura','Vitalidade'],['Cativar','Fé'],['Enganar','Destreza'],['Fascinar','Arcano'],['Firmeza','Resistência'],['Intimidar','Força'],['Negociar','Mente'],['Persuadir','Inteligência']];
 var E=['Arma (mão direita)','Arma (mão esquerda)','Escudo','Elmo','Peitoral','Manoplas','Grevas','Amuleto 1','Amuleto 2','Amuleto 3','Amuleto 4'];
-var LD={atk:[['Arma'],['Teste +','n'],['Dano'],['ES','n'],['Alcance'],['Cinza']],mag:[['Nome'],['Perícia','s'],['PM','n'],['ES','n'],['Efeito']],cin:[['Nome'],['Arma'],['PM','n'],['ES','n'],['Efeito']],inv:[['Item'],['Qtd','n'],['Peso','n'],['Notas']]};
-var st={},L={atk:[],mag:[],cin:[],inv:[]};
-try{var d=JSON.parse(localStorage.getItem('ficha2')||'{}');st=d.st||{};for(var k in d.L||{})L[k]=d.L[k]}catch(e){}
-function save(){try{localStorage.setItem('ficha2',JSON.stringify({st:st,L:L}))}catch(e){}}
+var SCF=['Pedra Luminosa','Cariana','Gravidade','Cristaliana','Noite','Lua Cheia'],SCE=['Ordem Dourada','Comunhão do Dragão','Monge de Fogo','Gigante de Fogo','Chama Frenética','Bestial'],mvT='F';
+var LD={atk:[['Arma'],['Perícia','s',['Luta','Pontaria','Astrologia','Religião','Arcanismo']],['Bônus teste','n'],['Dado de dano'],['Atrib. dano','s',['Força','Destreza','Inteligência','Fé','Arcano']],['Bônus dano','n']],mag:[['Nome'],['Perícia','s'],['PM','n'],['ES','n'],['Efeito'],['Escola','s',['—'].concat(SCF,SCE)],['Slots (1 a 3)','n'],['Descrição']],cin:[['Nome'],['Arma'],['PM','n'],['ES','n'],['Efeito']]};
+var ST=[1,2,4,6,9,12,16,20,25,30],lvI=0;
+var st={},L={atk:[],mag:[],cin:[]},IT=[],EQ={},NX=1,HS=[],AV={},RMOD=0,REC=10,MX={pv:0,pm:0,es:0},TOT={},LAST={},LA=null,PESADO=0,SOBRE=0;
+try{var d=JSON.parse(localStorage.getItem('ficha2')||'{}');st=d.st||{};for(var k in d.L||{})L[k]=d.L[k];IT=d.IT||[];if(!d.IT&&L.inv)IT=L.inv.map(function(r){return{n:r[0]||'Item',t:'Diversos',q:r[1]||1,w:r[2]||'',d:r[3]||''}});delete L.inv;
+var mx_=0;IT.forEach(function(x){if(x.id>mx_)mx_=x.id});NX=mx_+1;IT.forEach(function(x){if(!x.id)x.id=NX++});EQ=d.EQ||{};HS=d.HS||[];if(!d.A2)L.atk=(L.atk||[]).map(function(r){return[r[0]||'','Luta','','','Força','']});
+if(!d.EQ){[['mdir','en0','Mãos'],['mesq',st.en1?'en1':'en2','Mãos'],['elmo','en3','Armaduras','Elmo'],['peito','en4','Armaduras','Peitoral'],['luvas','en5','Armaduras','Luvas'],['grevas','en6','Armaduras','Grevas'],['am1','en7','Amuletos'],['am2','en8','Amuletos'],['am3','en9','Amuletos'],['am4','en10','Amuletos'],['q1','qi1','Diversos'],['q2','qi2','Diversos'],['q3','qi3','Diversos'],['q4','qi4','Diversos']].forEach(function(r){var v=st[r[1]];if(v)EQ[r[0]]=nmz(v,r[2],r[3]||(r[2]=='Mãos'?isb(v):''),r[1].charAt(0)=='e'?+r[1].slice(2):-1)})}
+}catch(e){}
+function save(){try{localStorage.setItem('ficha2',JSON.stringify({st:st,L:L,IT:IT,EQ:EQ,HS:HS,A2:1}))}catch(e){}}
 function $(s){return document.querySelector(s)}
 function q(a){return document.querySelectorAll(a)}
 function esc(v){return String(v==null?'':v).replace(/"/g,'&quot;')}
@@ -101,14 +131,12 @@ function inp(id,t){return '<input data-id="'+id+'" type="'+(t||'text')+'">'}
 function sel(id,def){return '<select data-id="'+id+'">'+A.map(function(a){return '<option'+(a==def?' selected':'')+'>'+a+'</option>'}).join('')+'</select>'}
 function ck(id,tb){return '<label class="ck"><input type="checkbox" data-id="'+id+'"><b id="'+tb+'"></b></label>'}
 $('#idt').innerHTML=[['nome','Nome'],['raca','Raça'],['orig','Origem'],['nivel','Nível','number'],['runas','Runas','number']].map(function(f){return '<label>'+f[1]+inp(f[0],f[2])+'</label>'}).join('')+'<label>Tamanho<select data-id="tam"><option>Médio</option><option>Grande</option></select></label>';
-$('#attrs').innerHTML=A.map(function(a,i){return '<label>'+a+inp('a'+i,'number')+'</label>'}).join('');
-$('#res').innerHTML=[['pv','PV'],['pm','PM'],['es','ES']].map(function(r){return '<div><b id="'+r[0]+'m">0</b><small>'+r[1]+' máximo</small><input data-id="'+r[0]+'c" type="number" placeholder="atual"></div>'}).join('')+'<div><b id="cg">0</b><small id="cgl">Carga</small></div><div><b id="rf">0</b><small>RDF</small></div><div><b id="rm">0</b><small>RDM</small></div><div><b id="rec">+10</b><small>Recuperar (turno parado)</small></div><div><small>Estus (vida)</small><input data-id="ev" type="number" value="3"></div><div><small>Estus Cinzento</small><input data-id="ek" type="number" value="1"></div><div id="pw" class="bad" style="grid-column:1/-1;border:0;padding:0"></div>';
-$('#skills').innerHTML=SK.map(function(s,i){return '<div class="sk"><span>'+s[0]+'</span>'+sel('sa'+i,s[1])+ck('st'+i,'tb'+i)+inp('so'+i,'number')+'<span class="t" id="sx'+i+'">0</span></div>'}).join('');
-$('#pres').innerHTML=P.map(function(p,i){return '<div class="sk"><span>'+p[0]+'</span><span>'+p[1]+'</span>'+ck('ps'+i,'pb'+i)+'<span></span><span class="t" id="px'+i+'">0</span></div>'}).join('');
-$('#qi').innerHTML=[1,2,3,4].map(function(i){return '<label>Slot '+i+inp('qi'+i)+'</label>'}).join('');
-$('#eqs').innerHTML=E.map(function(e,i){return '<div class="eq"><span>'+e+'</span>'+inp('en'+i)+inp('ew'+i,'number')+inp('er'+i,'number')+inp('em'+i,'number')+'<select data-id="ed'+i+'"><option>Íntegro</option><option>Danificado</option><option>Quebrado</option></select></div>'}).join('');
-function cell(k,i,j,f,v){if(f[1]=='s')return '<select data-l="'+k+','+i+','+j+'">'+['Astrologia','Religião','Arcanismo'].map(function(o){return '<option'+(o==v?' selected':'')+'>'+o+'</option>'}).join('')+'</select>';return '<input data-l="'+k+','+i+','+j+'" placeholder="'+f[0]+'" type="'+(f[1]=='n'?'number':'text')+'" value="'+esc(v)+'">'}
-function rl(k){$('#L_'+k).innerHTML=L[k].map(function(r,i){return '<div class="row">'+LD[k].map(function(f,j){return cell(k,i,j,f,r[j])}).join('')+'<button data-del="'+k+','+i+'" aria-label="Remover">✕</button></div>'}).join('')}
+$('#attrs').innerHTML=A.map(function(a,i){return '<label><span>'+a+'</span><div class="ar">'+inp('a'+i,'number')+'<button type="button" class="add" data-rs="a'+i+'">Rolar</button></div></label>'}).join('');
+$('#res').innerHTML=[['pv','PV'],['pm','PM'],['es','ES']].map(function(r){return '<div><b id="'+r[0]+'m">0</b><small>'+r[1]+' máximo</small><small id="'+r[0]+'s"></small></div>'}).join('')+'<div><b id="cg">0</b><small id="cgl">Carga</small></div><div><b id="rf">0</b><small>RDF</small></div><div><b id="rm">0</b><small>RDM</small></div><div><b id="rec">+10</b><small>Recuperar (turno parado)</small></div><div id="pw" class="bad" style="grid-column:1/-1;border:0;padding:0"></div>';
+$('#skills').innerHTML=SK.map(function(s,i){return '<div class="sk"><span>'+s[0]+'</span>'+sel('sa'+i,s[1])+ck('st'+i,'tb'+i)+inp('so'+i,'number')+'<span class="t" id="sx'+i+'" data-rs="s'+i+'">0</span></div>'}).join('');
+$('#pres').innerHTML=P.map(function(p,i){return '<div class="sk"><span>'+p[0]+'</span><span>'+p[1]+'</span>'+ck('ps'+i,'pb'+i)+'<span></span><span class="t" id="px'+i+'" data-rs="p'+i+'">0</span></div>'}).join('');
+function cell(k,i,j,f,v){if(f[1]=='s')return '<select data-l="'+k+','+i+','+j+'">'+(f[2]||['Astrologia','Religião','Arcanismo']).map(function(o){return '<option'+(o==v?' selected':'')+'>'+o+'</option>'}).join('')+'</select>';return '<input data-l="'+k+','+i+','+j+'" placeholder="'+f[0]+'" type="'+(f[1]=='n'?'number':'text')+'" value="'+esc(v)+'">'}
+function rl(k){$('#L_'+k).innerHTML=L[k].map(function(r,i){return '<div class="row">'+LD[k].map(function(f,j){return cell(k,i,j,f,r[j])}).join('')+(k=='atk'?'<button class="add" data-at="'+i+'">Atacar</button><button class="add" data-ac="'+i+'">Carregado</button><button class="add" data-ad="'+i+'">Dano</button>':'')+'<button data-del="'+k+','+i+'" aria-label="Remover">✕</button></div>'}).join('')}
 for(var k in LD)rl(k);
 function refill(){q('[data-id]').forEach(function(e){var v=st[e.dataset.id];
  if(e.type=='checkbox')e.checked=v==1;
@@ -120,16 +148,18 @@ function tb(v){return v>0?5*Math.ceil(v/10):0}
 function calc(){
  var av={};
  A.forEach(function(a,i){av[a]=Math.max(0,Math.floor(n('a'+i)))});
- var sm=0;A.forEach(function(a){sm+=av[a]});var lv=Math.max(1,sm-79),nv=$('[data-id=nivel]');nv.value=lv;nv.readOnly=true;st.nivel=lv;
+ AV=av;var sm=0;A.forEach(function(a){sm+=av[a]});var lv=Math.max(1,sm-79),nv=$('[data-id=nivel]');nv.value=lv;nv.readOnly=true;st.nivel=lv;
  function pat(p,b){var s=0;for(var k=1;k<=p;k++)s+=b+Math.floor((k-1)/10);return s}
- $('#pvm').textContent=pat(av.Vitalidade,5);$('#pmm').textContent=pat(av.Mente,3);$('#esm').textContent=pat(av['Resistência'],2);
- $('#rec').textContent='+'+(10+2*Math.max(0,Math.ceil(av['Resistência']/10)-1));
- $('#pw').textContent=(st.esc!==undefined&&st.esc!==''&&n('esc')<=0)?'Postura quebrada: 1 round vulnerável, sem agir.':'';
- var w=0,rf=0,rm=0;E.forEach(function(e,i){var f=st['ed'+i]=='Quebrado'?0:st['ed'+i]=='Danificado'?.5:1;w+=n('ew'+i);rf+=n('er'+i)*f;rm+=n('em'+i)*f});
- var mx=2*av['Resistência'],c=$('#cg');c.textContent=w+' / '+mx;c.className=w>mx?'bad':'';
+ MX.pv=pat(av.Vitalidade,5);MX.pm=pat(av.Mente,3);MX.es=pat(av['Resistência'],2);$('#pvm').textContent=MX.pv;$('#pmm').textContent=MX.pm;$('#esm').textContent=MX.es;
+ REC=10+2*Math.max(0,Math.ceil(av['Resistência']/10)-1);$('#rec').textContent='+'+REC;
+ $('#pw').textContent=(st.esc!==undefined&&st.esc!==''&&cu('es')<=0)?'Postura quebrada: 1 round vulnerável, sem agir.':'';
+ var w=0,rf=0,rm=0,AR=['elmo','peito','luvas','grevas'];
+ ['mdir','mesq','am1','am2','am3','am4'].concat(AR).forEach(function(k){var x=gi(EQ[k]);if(x){w+=parseFloat(x.w)||0;if(AR.indexOf(k)>=0){var f=x.e=='Quebrado'?0:x.e=='Danificado'?.5:1;rf+=(parseFloat(x.rf)||0)*f;rm+=(parseFloat(x.rm)||0)*f}}});
+ var mx=2*av['Resistência'],pc=mx?w/mx:(w?9:0),lvl=pc>1?'Sobrecarregado':pc>=.7?'Pesado':pc>=.3?'Médio':'Leve',rmod=pc>1?0:pc>=.7?-15:pc>=.3?0:10,c=$('#cg');RMOD=rmod;PESADO=pc>=.7&&pc<=1?1:0;SOBRE=pc>1?1:0;c.textContent=w+' / '+mx;c.className=pc>1?'bad':'';$('#cgl').textContent='Carga · '+lvl;
+ $('#cgx').textContent=lvl+': '+(pc>1?'não esquiva e andar custa o dobro.':pc>=.7?'Reflexos −15 e esquivar custa o dobro (10 de ES).':pc>=.3?'sem penalidade.':'Reflexos +10.');
  $('#rf').textContent=rf;$('#rm').textContent=rm;$('#ew').textContent=w;$('#erf').textContent=rf;$('#erm').textContent=rm;
- SK.forEach(function(s,i){var a=av[st['sa'+i]||s[1]]||0,t=st['st'+i]==1?tb(a):0;$('#tb'+i).textContent=t?'+'+t:'';$('#sx'+i).textContent=a+t+n('so'+i)});
- P.forEach(function(p,i){var a=av[p[1]],t=st['ps'+i]==1?tb(a):0;$('#pb'+i).textContent=t?'+'+t:'';$('#px'+i).textContent=a+t+n('po')})}
+ SK.forEach(function(s,i){var a=av[st['sa'+i]||s[1]]||0,t=st['st'+i]==1?tb(a):0;$('#tb'+i).textContent=t?'+'+t:'';var tt=a+t+n('so'+i)+(s[0]=='Reflexos'?rmod:0);TOT[s[0]]=tt;$('#sx'+i).textContent=tt});
+ P.forEach(function(p,i){var a=av[p[1]],t=st['ps'+i]==1?tb(a):0;$('#pb'+i).textContent=t?'+'+t:'';var tt=a+t+n('po');TOT[p[0]]=tt;$('#px'+i).textContent=tt});br()}
 document.addEventListener('input',function(e){var t=e.target;
  if(t.dataset.id){st[t.dataset.id]=t.type=='checkbox'?(t.checked?1:0):t.value;calc();save()}
  else if(t.dataset.l){var p=t.dataset.l.split(',');L[p[0]][p[1]][p[2]]=t.value;save()}});
@@ -171,12 +201,144 @@ var K=[
 {n:'Boiled Prawn',d:'(nome e efeito a confirmar)'},
 {n:'Shabriri\'s Woe',d:'(nome e efeito a confirmar)'}];
 var CH=['Introdução','Criar personagem','Perícias','Combate','Equipamento','Magias e Cinzas de Guerra','Mundo','Bestiário e chefes','Guia do mestre'];
+
+var IV=['Tudo','Mãos','Armaduras','Amuletos','Munição','Consumíveis','Ingredientes','Itens-chave','Mapas','Ferramentas','Diversos'];
+var SUB={'Mãos':['Arma','Escudo','Selo','Cajado','Arco','Besta'],'Armaduras':['Elmo','Peitoral','Luvas','Grevas']};
+var ivt='Tudo',ivs='',ed=-1,md=document.createElement('div');md.id='md';document.body.appendChild(md);
+function hx(v){return String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function isb(v){return /Arco/.test(v)?'Arco':/Besta/.test(v)?'Besta':/Cajado/.test(v)?'Cajado':/Selo/.test(v)?'Selo':/Escudo|Broquel/.test(v)?'Escudo':'Arma'}
+function ivr(){
+ $('#itabs').innerHTML=IV.map(function(t){return '<button class="chip'+(t==ivt?' on':'')+'" data-iv="'+t+'">'+t+'</button>'}).join('');
+ var sb=SUB[ivt]||[];$('#isub').innerHTML=sb.length?['Todos'].concat(sb).map(function(x){var v=x=='Todos'?'':x;return '<button class="chip'+(v==ivs?' on':'')+'" data-is="'+v+'">'+x+'</button>'}).join(''):'';
+ var l=[];IT.forEach(function(x,i){if((ivt=='Tudo'||x.t==ivt)&&(!ivs||x.s==ivs))l.push(i)});
+ var h='<button class="slot add" data-ia="1" aria-label="Adicionar item">+</button>'+l.map(function(i){var x=IT[i];return '<button class="slot" data-ie="'+i+'"><b>'+hx(x.n)+'</b>'+(x.q>1?'<i>x'+x.q+'</i>':'')+(x.e&&x.e!='Íntegro'?'<u>'+x.e+'</u>':'')+'</button>'}).join('');
+ for(var k=l.length+1;k<12||k%4;k++)h+='<div class="slot em"></div>';
+ $('#islots').innerHTML=h}
+function mt(){var t=$('#m_t').value,sb=SUB[t]||[],cs=$('#m_s'),cu=ed>=0?IT[ed].s:ivs;$('#m_sl').style.display=sb.length?'':'none';
+ cs.innerHTML=sb.map(function(x){return '<option'+(x==cu?' selected':'')+'>'+x+'</option>'}).join('');$('#m_eq').style.display=(t=='Mãos'||t=='Armaduras')?'':'none'}
+function mo(i){ed=i;var x=i<0?{n:'',t:ivt=='Tudo'?'Diversos':ivt,q:1,w:'',rf:'',rm:'',e:'Íntegro',d:''}:IT[i];
+ md.innerHTML='<div class="mc"><h2>'+(i<0?'Novo item':'Item')+'</h2><label>Título<input id="m_n" value="'+esc(x.n)+'"></label><label>Tipo<select id="m_t">'+IV.slice(1).map(function(t){return '<option'+(t==x.t?' selected':'')+'>'+t+'</option>'}).join('')+'</select></label><label id="m_sl">Subtipo<select id="m_s"></select></label><div class="g"><label>Quantidade<input id="m_q" type="number" value="'+(x.q||1)+'"></label><label>Peso<input id="m_w" type="number" step="any" value="'+esc(x.w)+'"></label></div><div class="g" id="m_eq"><label>RDF<input id="m_rf" type="number" value="'+esc(x.rf)+'"></label><label>RDM<input id="m_rm" type="number" value="'+esc(x.rm)+'"></label><label>Estado<select id="m_e">'+['Íntegro','Danificado','Quebrado'].map(function(t){return '<option'+(t==x.e?' selected':'')+'>'+t+'</option>'}).join('')+'</select></label></div><label>Descrição<textarea id="m_d" rows="4">'+hx(x.d)+'</textarea></label><div class="arw"><button class="card" data-m="s"><b>Salvar</b></button>'+(i>=0?'<button class="card" data-m="x"><b>Excluir</b></button>':'')+'<button class="card" data-m="c"><b>Fechar</b></button></div></div>';
+ md.className='on';mt()}
+md.onchange=function(e){if(e.target.id=='m_t')mt()};
+md.onclick=function(e){var q_=e.target.closest('[data-se]');if(q_){var id=+q_.dataset.se;for(var k in EQ)if(EQ[k]==id)delete EQ[k];if(id)EQ[sk]=id;else delete EQ[sk];md.className='';eqr();calc();save();return}var b=e.target.closest('[data-m]');if(!b)return;var m=b.dataset.m;
+ if(m=='s'){var t=$('#m_t').value,eq=t=='Mãos'||t=='Armaduras',x={n:$('#m_n').value||'Item',t:t,s:SUB[t]?$('#m_s').value:'',q:parseFloat($('#m_q').value)||1,w:$('#m_w').value,rf:eq?$('#m_rf').value:'',rm:eq?$('#m_rm').value:'',e:eq?$('#m_e').value:'',d:$('#m_d').value};x.id=ed<0?NX++:IT[ed].id;if(ed<0)IT.push(x);else IT[ed]=x;save()}
+ else if(m=='x'&&ed>=0){for(var k in EQ)if(EQ[k]==IT[ed].id)delete EQ[k];IT.splice(ed,1);save()}
+ md.className='';ivr();eqr();calc()};
+$('#p3').onclick=function(e){var b=e.target.closest('button');if(!b)return;
+ if(b.dataset.iv!==undefined){ivt=b.dataset.iv;ivs='';ivr()}else if(b.dataset.is!==undefined){ivs=b.dataset.is;ivr()}
+ else if(b.dataset.ia)mo(-1);else if(b.dataset.ie!==undefined)mo(+b.dataset.ie)};
+ivr();
+var sk='',SLD={mdir:['Mão direita','Mãos','','sw'],mesq:['Mão esquerda','Mãos','','sh'],elmo:['Elmo','Armaduras','Elmo','he'],peito:['Peitoral','Armaduras','Peitoral','ch'],luvas:['Luvas','Armaduras','Luvas','gl'],grevas:['Grevas','Armaduras','Grevas','bt'],flecha:['Flechas','Munição','Flecha','ar'],virote:['Virotes','Munição','Virote','ar'],am1:['Amuleto 1','Amuletos','','am'],am2:['Amuleto 2','Amuletos','','am'],am3:['Amuleto 3','Amuletos','','am'],am4:['Amuleto 4','Amuletos','','am'],q1:['Rápido 1','*','','fl'],q2:['Rápido 2','*','','fl'],q3:['Rápido 3','*','','fl'],q4:['Rápido 4','*','','fl']};
+var IC={sw:'<path d="M14 3h7v7l-9 9-3-3zM5 15l4 4M4 20l3-3"/>',sh:'<path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6z"/>',he:'<path d="M5 15a7 7 0 0 1 14 0v4H5zM5 15h14"/>',ch:'<path d="M8 4L3 8l3 3 2-1v10h8V10l2 1 3-3-5-4-2 2h-4z"/>',gl:'<path d="M8 21v-9L6 8l2-1 2 4V4h2v7V3h2v8V5h2v9l2-3 2 1-3 8z"/>',bt:'<path d="M9 3h5v9l6 3v4H7V12z"/>',ar:'<path d="M4 20L20 4M20 4h-6M20 4v6M4 20l-1-4M4 20l4 1"/>',am:'<circle cx="12" cy="15" r="5"/><path d="M9 4h6l-1 5h-4z"/>',fl:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/>'};
+function gi(id){for(var i=0;i<IT.length;i++)if(IT[i].id==id)return IT[i]}
+function ok(k,x){var d=SLD[k];if(d[1]!='*'&&x.t!=d[1])return false;if(d[1]=='Armaduras')return x.s==d[2];if(d[1]=='Munição')return x.n.indexOf(d[2])>=0;return true}
+function nmz(v,ty,sb,i){for(var j=0;j<IT.length;j++){var u=0;for(var k in EQ)if(EQ[k]==IT[j].id)u=1;if(IT[j].n==v&&!u)return IT[j].id}var x={id:NX++,n:v,t:ty,s:sb,q:1,w:st['ew'+i]||'',rf:st['er'+i]||'',rm:st['em'+i]||'',e:st['ed'+i]||'Íntegro',d:''};IT.push(x);return x.id}
+function slh(k){var d=SLD[k],x=gi(EQ[k]);return '<button class="slot eq'+lkA(k)+'" data-sl="'+k+'"><small>'+d[0]+'</small>'+(x?'<b>'+hx(x.n)+'</b>'+(x.e&&x.e!='Íntegro'?'<u>'+x.e+'</u>':''):'<svg viewBox="0 0 24 24" class="ic">'+IC[d[3]]+'</svg>')+'</button>'}
+function eqr(){var g=function(a){return a.map(slh).join('')};
+ $('#eqv').innerHTML='<div class="eqg"><div class="col">'+g(['mdir','mesq','flecha','virote'])+'</div><div class="col">'+g(['elmo','peito','luvas','grevas'])+'</div></div><h3>Amuletos</h3><div class="slots">'+g(['am1','am2','am3','am4'])+'</div>';
+ $('#qs').innerHTML=g(['q1','q2','q3','q4'])}
+function so(k){sk=k;var l=IT.filter(function(x){return ok(k,x)});md.innerHTML='<div class="mc"><h2>'+SLD[k][0]+'</h2><div class="slots">'+(l.length?l.map(function(x){return '<button class="slot" data-se="'+x.id+'"><b>'+hx(x.n)+'</b>'+(x.q>1?'<i>x'+x.q+'</i>':'')+(x.e&&x.e!='Íntegro'?'<u>'+x.e+'</u>':'')+'</button>'}).join(''):'<p>Nenhum item deste tipo no inventário.</p>')+'</div><div class="arw" style="margin-top:12px">'+(EQ[k]?'<button class="card" data-se="0"><b>Desequipar</b></button>':'')+'<button class="card" data-m="c"><b>Fechar</b></button></div></div>';md.className='on'}
+$('#p2').onclick=function(e){var b=e.target.closest('button');if(b&&b.dataset.sl)so(b.dataset.sl)};
+var NM={};O.forEach(function(o){[o.r,o.l,o.s].forEach(function(v){if(v)NM[v]=['Mãos',isb(v)]});o.p.forEach(function(v,j){if(v)NM[v]=['Armaduras',['Elmo','Peitoral','Luvas','Grevas'][j]]});o.i.forEach(function(x){NM[x[0]]=['Munição','']})});
+IT.forEach(function(x){if(!x.fx&&x.t=='Diversos'&&NM[x.n]){x.t=NM[x.n][0];x.s=NM[x.n][1];x.e=x.e||'Íntegro';x.rf=x.rf||'';x.rm=x.rm||''}x.fx=1});
+eqr();calc();save();
+
+var LB={f:'Falha crítica',c:'Crítico',p:'Crítico preciso',n:''};
+function cu(k){var m=MX[k],v=st[k+'c'];return v===undefined||v===''?m:Math.max(0,Math.min(+v||0,m))}
+function setc(k,v){st[k+'c']=Math.max(0,Math.min(v,MX[k]))}
+
+function g(id,d){var v=st[id];return v===undefined||v===''?d:(+v||0)}
+function fCost(L){var x=Math.max(0,((L+81)-92)*0.02);return Math.floor((x+0.1)*Math.pow(L+81,2)+1)}
+function lv(){var L=Math.floor(n('nivel')),c=fCost(L),r=n('runas'),m=L>=713;
+ $('#rn').innerHTML='<div class="cn2" style="margin:0">Para o próximo nível: <b style="min-width:0">'+(m?'nível máximo':c.toLocaleString('pt-BR'))+'</b>'+(m?'':' runas')+'</div>'+(m?'':'<div class="cn2"><select id="lvA">'+A.map(function(a,i){return '<option value="'+i+'"'+(i==lvI?' selected':'')+'>'+a+'</option>'}).join('')+'</select><button class="add" data-es="lv"'+(r>=c?'':' disabled')+'>Subir nível</button></div>')}
+function ct2(l,v,mx,k,t){return '<div class="cn2">'+l+' <b>'+v+' / '+mx+'</b><button class="add" data-es="'+k+'">'+t+'</button></div>'}
+function cons(re,q){if(cnt(re)<q)return false;IT.forEach(function(x){if(q>0&&re.test(x.n)){var c=+x.q||1,t=Math.min(q,c);x.q=c-t;q-=t}});IT=IT.filter(function(x){return !(re.test(x.n)&&x.q===0)});return true}
+function est(){var T=4;ST.forEach(function(v){if(n('sm')>=v)T++});
+ var nb=Math.min(g('nb',1),T),nc=T-nb,lg=Math.min(12,n('lg')),s=n('sm'),cc=Math.min(nc,g('cr',nc)),cb=Math.min(nb,g('bl',nb)),
+ h1=g('eb1',30)+g('ep1',7)*lg,h2=g('eb2',10)+g('ep2',4)*lg,nx=ST.filter(function(v){return v>s})[0];
+ function fk(c,t,cu,mx,tx,a){return '<div class="fk '+c+'"><div class="fi"></div><b>'+t+'</b><span>'+cu+' / '+mx+'</span><small>'+tx+'</small><button class="add" data-es="'+a+'"'+(cu?'':' disabled')+'>Beber</button></div>'}
+ function ct(l,k,v,mx){return '<div class="cn2">'+l+' <button class="add" data-es="'+k+'-">−</button><b>'+v+' / '+mx+'</b><button class="add" data-es="'+k+'+">+</button></div>'}
+ $('#esd').innerHTML='<div class="fl">'+fk('c','Estus Carmesim',cc,nc,'Cura '+h1+' PV','dc')+fk('b','Estus Cinzento',cb,nb,'Recupera '+h2+' PM','db')+'</div>'+ct2('Sementes Douradas',s,30,'sm+',nx?'Consumir '+(nx-s):'Máximo')+'<small>Frascos: '+T+' / 14 · No inventário: '+cnt(/semente dourada/i)+(nx?' · próximo frasco custa '+(nx-s)+' semente(s)':' · máximo')+'</small>'+ct2('Lágrimas Sagradas',lg,12,'lg+','Consumir 1')+'<small>No inventário: '+cnt(/l[áa]grima/i)+'</small>'+'<div class="cn2">Redistribuir: <button class="add" data-es="mc">+1 Carmesim</button><button class="add" data-es="mb">+1 Cinzento</button></div><div class="arw" style="margin-top:10px"><button class="add" data-es="rs">Descansar no Sítio de Graça</button></div>'}
+document.addEventListener('change',function(e){if(e.target.id=='lvA')lvI=+e.target.value});
+document.addEventListener('click',function(e){var b=e.target.closest('[data-es]');if(!b)return;var a=b.dataset.es,T=4;ST.forEach(function(v){if(n('sm')>=v)T++});
+ var nb=Math.min(g('nb',1),T),nc=T-nb,lg=Math.min(12,n('lg')),cc=Math.min(nc,g('cr',nc)),cb=Math.min(nb,g('bl',nb));
+ if(a=='dc'&&cc>0){st.cr=cc-1;setc('pv',cu('pv')+g('eb1',30)+g('ep1',7)*lg);toast('Estus Carmesim usado')}
+ else if(a=='db'&&cb>0){st.bl=cb-1;setc('pm',cu('pm')+g('eb2',10)+g('ep2',4)*lg);toast('Estus Cinzento usado')}
+ else if(a=='sm+'){var nx=ST.filter(function(v){return v>n('sm')})[0];if(!nx)return toast('Seus frascos já estão no máximo');var c=nx-n('sm');if(!cons(/semente dourada/i,c))return toast(c>1?'Você não possui '+c+' Sementes Douradas suficientes':'Você não possui Semente Dourada');st.sm=nx;toast('Frasco adicionado!')}
+ else if(a=='lg+'){if(n('lg')>=12)return toast('Todas as Lágrimas já foram usadas');if(!cons(/l[áa]grima/i,1))return toast('Você não possui Lágrimas Sagradas');st.lg=n('lg')+1;toast('Cura aumentada!')}
+ else if(a=='mc'&&nb>0){st.nb=nb-1;st.cr=Math.min(nc+1,cc+1)}
+ else if(a=='mb'&&nc>0){st.nb=nb+1;st.bl=Math.min(nb+1,cb+1);st.cr=Math.min(nc-1,cc)}
+ else if(a=='rs'){delete st.cr;delete st.bl;['pv','pm','es'].forEach(function(k){setc(k,MX[k])});st.atn=0;LA=null;toast('Descansou: tudo restaurado')}
+ else if(a=='lv'){var L=Math.floor(n('nivel')),c=fCost(L);if(n('runas')>=c&&L<713){st.runas=n('runas')-c;st.nivel=L+1;st['a'+lvI]=n('a'+lvI)+1;refill();toast('Nível '+(L+1))}}
+ else return;
+ refill();calc();save();try{ivr()}catch(x){}});
+
+function cnt(re){var t=0;IT.forEach(function(x){if(re.test(x.n))t+=(+x.q||1)});return t}
+function nSl(){return 2+Math.min(8,cnt(/mem[óo]ria/i))}
+function nAm(){return 1+Math.min(3,cnt(/bolsa.*talism|talism.*bolsa/i))}
+function lkA(k){return +k.slice(2)>nAm()?' em" disabled data-z="1':''}
+function msz(r){return Math.max(1,Math.min(3,Math.floor(+r[6])||1))}
+function msl(){var T=nSl(),u=0,h='',pos=0;
+ L.mag.forEach(function(r,i){if(r&&r[8]=='1'){var z=msz(r);u+=z;h+='<button class="slot'+(pos+z>T?' em':'')+'" style="grid-column:span '+z+'" data-mg="u'+i+'"><b>'+hx(r[0]||'Magia')+'</b><small>'+z+' slot'+(z>1?'s':'')+'</small></button>';pos+=z}});
+ for(;pos<10;pos++)h+='<button class="slot'+(pos>=T?' em"':' add" data-mg="o"')+(pos>=T?' disabled':'')+'>'+(pos>=T?'🔒':'+')+'</button>';
+ $('#msl').innerHTML='<div class="ms">'+h+'</div><small>Pedras de Memória no inventário: '+(T-2)+' · Slots: '+T+' · Em uso: '+u+' · Amuletos liberados: '+nAm()+'</small>'}
+function mv(){var T=nSl(),u=0;L.mag.forEach(function(r){if(r[8]=='1')u+=msz(r)});
+ var sc=mvT=='F'?SCF:mvT=='E'?SCE:[''],h='<div class="mc"><h2>Ver Magias</h2><div class="arw"><button class="add" data-mg="tF">Feitiços</button><button class="add" data-mg="tE">Encantamentos</button><button class="add" data-mg="tO">Sem escola</button></div><small>Slots livres: '+(T-u)+' de '+T+'</small>';
+ sc.forEach(function(s){var rs=L.mag.map(function(r,i){return[r,i]}).filter(function(p){var e=p[0][5];return mvT=='O'?(!e||e=='—'):e==s});
+  if(!rs.length)return;h+='<h3>'+(s||'Magias')+'</h3>'+rs.map(function(p){var r=p[0],i=p[1],on=r[8]=='1',z=msz(r);return '<div class="row" style="align-items:center"><span style="flex:1"><b>'+hx(r[0]||'Magia')+'</b><br><small>PM '+(r[2]||0)+' · ES '+(r[3]||0)+' · '+z+' slot(s)'+(r[4]?' · '+hx(r[4]):'')+'</small></span><button class="add" data-mg="'+(on?'u':'e')+i+'"'+(!on&&z>T-u?' disabled':'')+'>'+(on?'Remover':'Equipar')+'</button></div>'}).join('')});
+ if(h.indexOf('<h3>')<0)h+='<p>Nenhuma magia aqui. Cadastre na lista de Magias abaixo.</p>';
+ md.innerHTML=h+'<div class="arw"><button class="add" data-mg="x">Fechar</button></div></div>';md.className='on'}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-mg]');if(!b||b.disabled)return;var a=b.dataset.mg,c=a.charAt(0),i=+a.slice(1);
+ if(a=='o'){mvT='F';mv();return}if(a=='x'){md.className='';return}if(c=='t'){mvT=a.charAt(1);mv();return}
+ if(c=='e')L.mag[i][8]='1';else if(c=='u')L.mag[i][8]='';else return;
+ save();msl();if(md.className=='on')mv()});
+function toast(m){var t=$('#tt');t.textContent=m;t.className='on';setTimeout(function(){t.className=''},2600)}
+function rnd(x){var u=new Uint32Array(1);crypto.getRandomValues(u);return u[0]%x+1}
+function br(){var h='';[['pv','PV','#d94b4b'],['pm','PM','#4a8cff'],['es','ES','#2fbf62']].forEach(function(r){var k=r[0],m=MX[k],c=cu(k);
+ h+='<div class="bar"><div class="bh"><b>'+r[1]+'</b><span>'+c+' / '+m+'</span></div><div class="bt"><div style="width:'+(m?100*c/m:0)+'%;background:'+r[2]+'"></div></div><div class="arw"><button class="add" data-bar="'+k+',-10">−10</button><button class="add" data-bar="'+k+',-1">−1</button><button class="add" data-bar="'+k+',1">+1</button><button class="add" data-bar="'+k+',10">+10</button></div></div>';
+ var e=$('#'+k+'s');if(e)e.textContent='atual '+c});$('#bars').innerHTML=h;$('#atn').textContent=n('atn');est();lv();try{msl();eqr()}catch(x){}}
+function pan(t,num,ln,cls){var p=$('#rp');p.innerHTML='<div class="rpc"><b>'+hx(t)+'</b><div class="die spin"><svg viewBox="0 0 100 100"><polygon points="50,4 93,27 93,73 50,96 7,73 7,27"/></svg><span id="dn">0</span></div>'+ln.filter(Boolean).map(function(x){return '<p>'+hx(x)+'</p>'}).join('')+'<button class="card" data-rc="1" style="text-align:center"><b>Fechar</b></button></div>';p.className='on c'+cls;
+ var s=$('#dn'),k=0,iv=setInterval(function(){s.textContent=rnd(100);if(++k>10){clearInterval(iv);s.textContent=num;$('.die').classList.remove('spin')}},70)}
+function rr(t,parts,done,note){var d=rnd(100),sm=0,tx='d100 '+d;parts.forEach(function(p){if(p[1]){sm+=p[1];tx+=(p[1]<0?' − ':' + ')+p[0]+' '+Math.abs(p[1])}});var tot=d+sm,cls=d<=5?'f':d==100?'p':d>=96?'c':'n';
+ if(done)done(cls);HS.unshift({t:t,x:tx+' = '+tot,c:cls,n:tot});HS=HS.slice(0,30);save();pan(t,tot,[tx+' = '+tot,LB[cls],note||''],cls)}
+function skp(nm,at){var i=0;for(var j=0;j<SK.length;j++)if(SK[j][0]==nm)i=j;var a=at||st['sa'+i]||SK[i][1];return [[a,AV[a]||0],['treino',st['st'+i]==1?tb(AV[a]||0):0],['outros',n('so'+i)],['carga',nm=='Reflexos'?RMOD:0]]}
+function skpP(i){var a=P[i][1];return [[a,AV[a]||0],['treino',st['ps'+i]==1?tb(AV[a]||0):0],['outros',n('po')]]}
+function spend(c,why){var es=cu('es');if(c>es){toast('ES insuficiente: custa '+c+' e você tem '+es);return false}setc('es',es-c);LA={k:'es',a:c};return true}
+function atk(i,car){var r=L.atk[i],sk=r[1]||'Luta',nn=n('atn')+1,c=5+nn*(nn-1)+(car?2:0);if(!spend(c))return;st.atn=nn;LA.at=1;
+ var tp=skp(sk);tp.push(['bônus',+r[2]||0]);if(car)tp.push(['carregado',-10]);
+ rr('Ataque: '+(r[0]||'Arma')+(car?' (carregado)':''),tp,function(cl){LAST[i]={car:car,cls:cl}},'−'+c+' ES (ataque '+nn+' do turno)');calc();save()}
+function dmg(i){var r=L.atk[i],m=String(r[3]||'').trim().toLowerCase().match(/^(\d*)d(\d+)$/),ds=[],sm=0;
+ if(m){var c=+m[1]||1;for(var k=0;k<c;k++){var x=rnd(+m[2]);ds.push(x);sm+=x}}else sm=parseFloat(r[3])||0;
+ var at=r[4]||'Força',bs=sm+(AV[at]||0)+(+r[5]||0),z=LAST[i]||{car:0,cls:'n'},mu=z.cls=='f'?0:z.cls=='p'?(z.car?4:3):z.cls=='c'?(z.car?3:2):(z.car?1.5:1),tot=Math.floor(bs*mu);delete LAST[i];
+ var tx=(ds.length?'dados ['+ds.join(', ')+']':'base '+sm)+' + '+at+' '+(AV[at]||0)+' + bônus '+(+r[5]||0)+' = '+bs+' × '+mu+' = '+tot;
+ HS.unshift({t:'Dano: '+(r[0]||'Arma'),x:tx,c:z.cls,n:tot});HS=HS.slice(0,30);save();pan('Dano: '+(r[0]||'Arma'),tot,[tx,z.cls=='f'?'Falha crítica: sem dano':LB[z.cls]+(z.car?' carregado':'')],z.cls)}
+function reac(k){if(k=='esq'){if(SOBRE){toast('Sobrecarregado: não pode esquivar');return}var c=PESADO?10:5;if(!spend(c))return;rr('Esquivar',skp('Reflexos'),0,'−'+c+' ES')}
+ else if(k=='par'){if(!spend(5))return;rr('Aparar',skp('Luta','Destreza'),0,'−5 ES. Precisa superar o ataque por 15 ou mais.')}
+ else if(k=='def')rr('Defender',skp('Fortitude'),0,'Se passar, pague o custo do ataque inimigo.');
+ else if(k=='pay'){var c=+$('#ecost').value||0;if(c&&spend(c))toast('−'+c+' ES')}
+ calc();save()}
+$('#p4').onclick=function(e){var b=e.target.closest('button');if(!b)return;var d=b.dataset;
+ if(d.bar){var p=d.bar.split(',');setc(p[0],cu(p[0])+ +p[1]);calc();save()}
+ else if(d.tn=='ini')rr('Iniciativa',[['Destreza',AV.Destreza||0]]);
+ else if(d.tn=='new'){st.atn=0;LA=null;calc();save()}
+ else if(d.tn=='rec'){setc('es',cu('es')+REC);st.atn=0;LA=null;calc();save();toast('+'+REC+' ES')}
+ else if(d.tn=='undo'){if(LA){setc(LA.k,cu(LA.k)+LA.a);if(LA.at)st.atn=Math.max(0,n('atn')-1);LA=null;calc();save()}}
+ else if(d.at!==undefined)atk(+d.at,0);else if(d.ac!==undefined)atk(+d.ac,1);else if(d.ad!==undefined)dmg(+d.ad);
+ else if(d.re)reac(d.re)};
+document.addEventListener('click',function(e){var r=e.target.closest('[data-rs]');if(!r)return;e.preventDefault();var c=r.dataset.rs,i=+c.slice(1);
+ if(c.charAt(0)=='a')rr(A[i],[[A[i],AV[A[i]]||0]]);else if(c.charAt(0)=='s')rr(SK[i][0],skp(SK[i][0]));else rr(P[i][0],skpP(i))});
+$('#rp').onclick=function(e){if(e.target.closest('[data-rc]'))$('#rp').className=''};
+function hs(){md.innerHTML='<div class="mc"><h2>Histórico de rolagens</h2>'+(HS.length?HS.map(function(h){return '<p style="margin:8px 0" class="h'+h.c+'"><b>'+hx(h.t)+' · '+h.n+'</b><br><small>'+hx(h.x)+'</small></p>'}).join(''):'<p>Nenhuma rolagem ainda.</p>')+'<div class="arw"><button class="card" data-hc="1"><b>Limpar</b></button><button class="card" data-m="c"><b>Fechar</b></button></div></div>';md.className='on'}
+$('#hb').onclick=hs;
+md.addEventListener('click',function(e){if(e.target.closest('[data-hc]')){HS=[];save();hs()}});
+calc();
 var cur=0,cho=[],opts=[],need=0,car=null,sv=document.createElement('div');sv.id='start';document.body.insertBefore(sv,document.body.firstChild);
 function show(on){document.body.classList.toggle('pick',on)}
 function has(){return Object.keys(st).length>1}
 function go(fn){sv.classList.add('fo');setTimeout(function(){fn();window.scrollTo(0,0);sv.classList.remove('fo')},350)}
 function srt(a){return a.sort(function(x,y){return x.localeCompare(y,'pt')})}
-function s1(){sv.innerHTML='<div class="wt">Bem-vindo, Maculado!</div><div class="mn">'+(has()?'<button class="card" data-go="back"><b>Voltar à ficha</b></button><button class="card" data-go="new"><b>Criar Maculado</b><small>Apaga a ficha salva neste aparelho.</small></button>':'<button class="card" data-go="new"><b>Criar Maculado</b></button>')+'<button class="card" data-go="sys"><b>Ler Sistema</b></button></div>'}
+function s1(){sv.innerHTML='<div class="wt">Bem-vindo, Maculado!</div><div class="mn">'+(has()?'<button class="card" data-go="back"><b>Voltar à ficha</b></button><button class="card" data-go="cf"><b>Criar Maculado</b></button>':'<button class="card" data-go="new"><b>Criar Maculado</b></button>')+'<button class="card" data-go="sys"><b>Ler Sistema</b></button></div><div class="vr">VR.1.3</div>'}
+function sc(){sv.innerHTML='<div class="wt" style="font-size:clamp(26px,7vw,44px);margin-top:10vh">Você tem certeza?</div><div class="mn"><p style="text-align:center">Criar um novo Maculado vai apagar a sua ficha atual.</p><button class="card" data-go="new"><b>Sim, apagar e criar</b></button><button class="card" data-go="home"><b>Cancelar</b></button></div>'}
 function sl(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-')}
 function imgErr(i){if(i.src.indexOf('.jpg')>0){i.src=i.src.replace('.jpg','.png')}else{i.remove()}}
 function s2(){sv.innerHTML='<h2 style="text-align:center">Escolha sua origem</h2><div class="car" id="car">'+O.map(function(o,i){var it=[o.r,o.l,o.s].filter(Boolean).join(' · ');return '<div class="oc"><div class="ot">'+o.n+'</div><div class="im"><img src="imagens/'+sl(o.n)+'.jpg" alt="" onerror="imgErr(this)"></div><div class="ag">'+o.a.map(function(v,j){return '<div><small>'+AB[j]+'</small><b>'+v+'</b></div>'}).join('')+'</div><p>Nível '+(o.a.reduce(function(x,y){return x+y})-79)+'</p><p>'+it+'</p><button class="card" data-go="o:'+i+'" style="text-align:center;margin:0"><b>Escolher</b></button></div>'}).join('')+'</div><div class="arw"><button class="card" data-go="ar:-1">◀</button><button class="card" data-go="ar:1">▶</button></div><div class="arw" style="margin-top:10px"><button class="card" data-go="home">Voltar</button></div>';
@@ -184,22 +346,26 @@ function s2(){sv.innerHTML='<h2 style="text-align:center">Escolha sua origem</h2
  window.onmousemove=function(e){if(dn)car.scrollLeft=s0-(e.pageX-x0)};window.onmouseup=function(){if(dn){dn=0;car.style.scrollSnapType=''}}}
 function s3(){var o=TR[cur],f=o[0].split('|');need=o[1];cho=[];opts=srt(o[2].split('|'));
  sv.innerHTML='<h2>'+O[cur].n+': perícias treinadas</h2><p>Treino fixo: <b>'+srt(f.slice()).join(', ')+'</b></p><p>Escolha <b>'+need+'</b>: <span id="cnt">0</span>/'+need+'</p><div>'+opts.map(function(x,j){return '<button class="card opt" data-go="t:'+j+'"><b>'+x+'</b></button>'}).join('')+'</div><button class="card" id="cont" data-go="cont" style="opacity:.4"><b>Continuar</b></button><button class="card" data-go="new"><b>Voltar às origens</b></button>'}
-function s4(){sv.innerHTML='<h2>'+O[cur].n+': escolha sua lembrança</h2>'+K.map(function(k,j){return '<button class="card" data-go="k:'+j+'"><b>'+k.n+'</b><small>'+k.d+'</small></button>'}).join('')+'<button class="card" data-go="new"><b>Voltar às origens</b></button>'}
+function s4(){sv.innerHTML='<h2>'+O[cur].n+': escolha sua lembrança</h2>'+K.map(function(k,j){return '<button class="card kc" data-go="k:'+j+'"><span class="ki"><img src="imagens/lembrancas/'+sl(k.n)+'.jpg" alt="" onerror="imgErr(this)"></span><span class="kt"><b>'+k.n+'</b><small>'+k.d+'</small></span></button>'}).join('')+'<button class="card" data-go="new"><b>Voltar às origens</b></button>'}
 function s5(){sv.innerHTML='<h2>Sistema</h2>'+CH.map(function(c,i){return '<button class="card" data-go="c:'+i+'"><b>Capítulo '+(i+1)+'</b><small>'+c+'</small></button>'}).join('')+'<p id="cm" class="bad"></p><button class="card" data-go="home"><b>Voltar</b></button>'}
 function tkey(nm){for(var i=0;i<SK.length;i++)if(SK[i][0]==nm)return 'st'+i;for(i=0;i<P.length;i++)if(P[i][0]==nm)return 'ps'+i}
-function make(k){var o=O[cur],c=K[k];st={};L={atk:[],mag:[],cin:[],inv:[]};
+function make(k){var o=O[cur],c=K[k];st={};L={atk:[],mag:[],cin:[]};IT=[];EQ={};NX=1;
  o.a.forEach(function(v,i){st['a'+i]=v});st.orig=o.n;
- [o.r,'',o.s].concat(o.p).forEach(function(v,i){if(v)st['en'+i]=v});
- L.atk=[[o.w[0][0],'','','5','',o.w[0][1]]];
+ L.atk=[[o.w[0][0],isb(o.w[0][0])=='Arco'?'Pontaria':'Luta','','',isb(o.w[0][0])=='Arco'?'Destreza':'Força','']];LAST={};LA=null;
  L.cin=o.w.filter(function(x){return x[1]}).map(function(x){return[x[1],x[0],'','','Arte padrão da arma']});
  L.mag=o.m.map(function(x){return[x[0],x[1],'','','']});
- L.inv=[['Memória da Graça',1,'','']];if(o.l)L.inv.push([o.l,1,'','Arma secundária']);
- o.i.forEach(function(x){L.inv.push([x[0],x[1]||'','',''])});
- if(c.q)st.en7=c.n;else L.inv.push([c.n,1,'',c.d]);
+ function ad(x,k){x.id=NX++;IT.push(x);if(k)EQ[k]=x.id}
+ ad({n:'Memória da Graça',t:'Itens-chave',q:1,w:'',d:''});
+ var pn=['Elmo','Peitoral','Luvas','Grevas'],ak=['elmo','peito','luvas','grevas'];
+ [[o.r,'mdir',''],[o.l,'','Arma secundária'],[o.s,'mesq','']].forEach(function(a){if(a[0])ad({n:a[0],t:'Mãos',s:isb(a[0]),q:1,w:'',rf:'',rm:'',e:'Íntegro',d:a[2]},a[1])});
+ o.p.forEach(function(v,j){if(v)ad({n:v,t:'Armaduras',s:pn[j],q:1,w:'',rf:'',rm:'',e:'Íntegro',d:''},ak[j])});
+ o.i.forEach(function(x){ad({n:x[0],t:'Munição',q:x[1]||1,w:'',d:''},/Flecha/.test(x[0])&&!EQ.flecha?'flecha':'')});
+ if(c.q)ad({n:c.n,t:'Amuletos',q:1,w:'',d:c.d},'am1');else ad({n:c.n,t:({'Chave de Pedra-Espada':'Itens-chave','Panela Rachada':'Ingredientes','Runa das Terras Intermédias':'Consumíveis','Semente Dourada':'Consumíveis','Cinzas do Diabrete Presado':'Consumíveis'}[c.n])||'Diversos',q:1,w:'',d:c.d});
+ ivt='Tudo';ivs='';ivr();eqr();
  TR[cur][0].split('|').concat(cho).forEach(function(nm){if(nm){var t=tkey(nm);if(t)st[t]=1}});
  refill();for(var z in L)rl(z);calc();save();show(false);window.scrollTo(0,0)}
 sv.onclick=function(e){var b=e.target.closest('[data-go]');if(!b)return;var g=b.dataset.go;
- if(g=='new')go(s2);else if(g=='back')show(false);else if(g=='home')go(s1);else if(g=='sys')go(s5);
+ if(g=='new')go(s2);else if(g=='cf')go(sc);else if(g=='back')show(false);else if(g=='home')go(s1);else if(g=='sys')go(s5);
  else if(g.indexOf('ar:')==0)car.scrollBy({left:+g.slice(3)*car.clientWidth*.8,behavior:'smooth'});
  else if(g.indexOf('o:')==0){cur=+g.slice(2);go(TR[cur][1]?s3:s4)}
  else if(g.indexOf('t:')==0){var x=opts[+g.slice(2)],p=cho.indexOf(x);if(p>=0)cho.splice(p,1);else if(cho.length<need)cho.push(x);
